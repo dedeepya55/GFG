@@ -30,15 +30,14 @@ class Solution {
     // Returns count buildings that can see sunlight
     public int countBuildings(int[] height) {
         // code here
-        int m=Integer.MIN_VALUE;
-        int c=0;
+        int h=Integer.MIN_VALUE;
+        int k=0;
         for(int i=0;i<height.length;i++){
-            if(m<height[i]){
-                c++;
-                m=height[i];
-                // System.out.println(height[i]);
+            if(height[i]>h){
+                h=height[i];
+                k++;
             }
         }
-        return c;
+        return k;
     }
 }
